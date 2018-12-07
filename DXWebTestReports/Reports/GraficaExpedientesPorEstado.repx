@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.2.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" Margins="23, 27, 170, 16" PageWidth="850" PageHeight="1100" Version="18.2" FilterString="[FECHA_CREACION] Between(?fechaIni, ?fechaFin)" DataMember="rep_V_EXPEDIENTE" DataSource="#Ref-0">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="4" Description="Fecha Inicial:" ValueInfo="2018-11-01" Name="fechaIni" Type="#Ref-3" />
+    <Item2 Ref="5" Description="Fecha Final:" ValueInfo="2018-12-06" Name="fechaFin" Type="#Ref-3" />
+    <Item3 Ref="7" Visible="false" Description="titulo" ValueInfo="EXPEDIENTES POR ESTADO" Name="titulo" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="8" ControlType="TopMarginBand" Name="TopMargin1" HeightF="169.79">
+      <Controls>
+        <Item1 Ref="9" ControlType="XRSubreport" Name="subreport1" ReportSourceUrl="EncabezadoPortrait" SizeF="800,37.56" LocationFloat="0, 11.45">
+          <ParameterBindings>
+            <Item1 Ref="11" ParameterName="fechaInicial" Parameter="#Ref-4" />
+            <Item2 Ref="12" ParameterName="fechaFinal" Parameter="#Ref-5" />
+            <Item3 Ref="13" ParameterName="tituloReporte" Parameter="#Ref-7" />
+            <Item4 Ref="14" ParameterName="pFechas" DataMember="ToString()" />
+          </ParameterBindings>
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="15" ControlType="DetailBand" Name="Detail1" HeightF="3.12" />
+    <Item3 Ref="16" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="401.03">
+      <Controls>
+        <Item1 Ref="17" ControlType="XRChart" Name="chart1" DataSource="#Ref-0" SizeF="627.08,401.02" LocationFloat="11.45, 0" BorderColor="Black" Borders="None">
+          <Chart Ref="18">
+            <DataContainer Ref="19" DataMember="rep_V_EXPEDIENTE" SeriesDataMember="Estado">
+              <SeriesTemplate Ref="20" SeriesDataMember="Estado" ArgumentDataMember="Estado" ValueDataMembersSerializable="ID">
+                <NumericSummaryOptions Ref="21" SummaryFunction="COUNT()" />
+                <DateTimeSummaryOptions Ref="22" SummaryFunction="COUNT()" />
+                <QualitativeSummaryOptions Ref="23" SummaryFunction="COUNT()" />
+              </SeriesTemplate>
+            </DataContainer>
+            <OptionsPrint Ref="24" ImageFormat="Metafile" />
+            <Diagram Ref="25" TypeNameSerializable="XYDiagram">
+              <AxisX Ref="26" StickToEnd="false" VisibleInPanesSerializable="-1" />
+              <AxisY Ref="27" VisibleInPanesSerializable="-1" />
+            </Diagram>
+            <AutoSeriesCheckedInLegendStates>
+              <Item1 Ref="28" AutoSeriesName="Series 3" CheckState="true" />
+              <Item2 Ref="29" AutoSeriesName="Series 2" CheckState="true" />
+              <Item3 Ref="30" AutoSeriesName="Series 1" CheckState="true" />
+            </AutoSeriesCheckedInLegendStates>
+          </Chart>
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="31" ControlType="BottomMarginBand" Name="BottomMargin1" HeightF="15.62" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v18.2" Ref="3" Content="System.DateTime" Type="System.Type" />
+    <Item2 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v18.2" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlZhbGlkYWNpb25KdXJpZGljYSIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9InJlcF9WX0VYUEVESUVOVEUiPjxUYWJsZXM+PFRhYmxlIE5hbWU9InJlcC5WX0VYUEVESUVOVEUiIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0icmVwLlZfRVhQRURJRU5URSIgTmFtZT0iSUQiIC8+PENvbHVtbiBUYWJsZT0icmVwLlZfRVhQRURJRU5URSIgTmFtZT0iRVNUQVRVUyIgLz48Q29sdW1uIFRhYmxlPSJyZXAuVl9FWFBFRElFTlRFIiBOYW1lPSJFc3RhZG8iIC8+PENvbHVtbiBUYWJsZT0icmVwLlZfRVhQRURJRU5URSIgTmFtZT0iRkVDSEFfQ1JFQUNJT04iIC8+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0icmVwX1ZfRVhQRURJRU5URSI+PEZpZWxkIE5hbWU9IklEIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iRVNUQVRVUyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVzdGFkbyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGRUNIQV9DUkVBQ0lPTiIgVHlwZT0iRGF0ZVRpbWUiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

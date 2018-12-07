@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="18.2.3.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v18.2, Version=18.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" Landscape="true" Margins="7, 0, 4, 4" PageWidth="1100" PageHeight="850" Version="18.2">
+  <Extensions>
+    <Item1 Ref="1" Key="DataSerializationExtension" Value="DevExpress.XtraReports.Web.ReportDesigner.DefaultDataSerializer" />
+  </Extensions>
+  <Parameters>
+    <Item1 Ref="3" Description="Fecha Inicial" ValueInfo="2018-12-06" Name="fechaInicial" Type="#Ref-2" />
+    <Item2 Ref="4" Description="Fecha Final" ValueInfo="2018-12-06" Name="fechaFinal" Type="#Ref-2" />
+    <Item3 Ref="6" Description="Titulo" Name="tituloReporte" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="7" ControlType="TopMarginBand" Name="TopMargin1" HeightF="3.69" />
+    <Item2 Ref="8" ControlType="DetailBand" Name="Detail1" HeightF="129">
+      <Controls>
+        <Item1 Ref="9" ControlType="XRLabel" Name="label3" Multiline="true" Text="&lt;TITULO REPORTE&gt;" TextAlignment="MiddleCenter" SizeF="580.17,35.48" LocationFloat="197.8, 62.38" Font="Segoe UI Light, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="10" Expression=" ?tituloReporte " PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="11" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="12" ControlType="XRPictureBox" Name="pictureBox1" ImageUrl="https://justicia4gstore.blob.core.windows.net/images/recursos/logoCentral.png" Sizing="StretchImage" SizeF="173.97,125" LocationFloat="13.54, 4" />
+        <Item3 Ref="13" ControlType="XRLabel" Name="label2" Multiline="true" TextAlignment="MiddleRight" SizeF="145.29,35.48" LocationFloat="812.5, 22.05" Font="Segoe UI Light, 10pt" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="14" Expression="'De: ' + ?fechaInicial + NewLine() +  ' A:' + ?fechaFinal" PropertyName="Text" EventName="BeforePrint" />
+          </ExpressionBindings>
+          <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="16" ControlType="XRLabel" Name="label1" Multiline="true" Text="DIRECCIÓN JURÍDICA DE GRUPO MONTEMAYOR" TextAlignment="MiddleCenter" SizeF="578.23,35.48" LocationFloat="199.74, 9.8" Font="Segoe UI Light, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="17" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+      </Controls>
+    </Item2>
+    <Item3 Ref="18" ControlType="BottomMarginBand" Name="BottomMargin1" HeightF="4" />
+  </Bands>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v18.2" Ref="2" Content="System.DateTime" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

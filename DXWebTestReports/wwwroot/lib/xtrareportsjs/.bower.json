@@ -1,0 +1,68 @@
+{
+  "name": "xtrareportsjs",
+  "version": "18.2.3",
+  "description": "DevExpress Reporting",
+  "moduleType": [
+    "globals"
+  ],
+  "main": [
+    "js/dx-analytics-core.js",
+    "js/dx-querybuilder.js",
+    "js/dx-webdocumentviewer.js",
+    "js/dx-reportdesigner.js",
+    "css/dx-querybuilder.min.css",
+    "css/dx-webdocumentviewer.min.css",
+    "css/dx-reportdesigner.min.css",
+    "css/dx-analytics.common.min.css",
+    "css/dx-analytics.light.min.css",
+    "html/dx-analytics-core.html",
+    "html/dx-querybuilder.html",
+    "html/dx-webdocumentviewer.html",
+    "html/dx-reportdesigner.html"
+  ],
+  "authors": [
+    {
+      "name": "Developer Express Inc.",
+      "email": "support@devexpress.com",
+      "homepage": "http://www.devexpress.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/DevExpress/bower-xtrareports-js"
+  },
+  "license": "http://www.devexpress.com/Support/EULAs/NetComponents.xml",
+  "homepage": "http://www.devexpress.com/Subscriptions/Reporting",
+  "keywords": [
+    "xtrareports",
+    "devexpress",
+    "developer express",
+    "reporting",
+    "document viewer",
+    "report designer",
+    "analytics"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3 || ^3.0.0",
+    "jquery-ui": "^1.11.4",
+    "knockout": "latest",
+    "globalize": "^1.1",
+    "devextreme": "18.2.3"
+  },
+  "ignore": [
+    "node_modules",
+    "bower_components"
+  ],
+  "install": {
+    "path": "lib"
+  },
+  "_release": "18.2.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "18.2.3",
+    "commit": "4c9120777d1461cc59cd72f830c4444ffa99b694"
+  },
+  "_source": "https://github.com/DevExpress/bower-xtrareports-js.git",
+  "_target": "~18.2.3",
+  "_originalSource": "xtrareportsjs"
+}

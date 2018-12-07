@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Reports\Expedientes.repx" />
+    <None Remove="Reports\XtraReport.repx" />
+    <None Remove="Reports\XtraReportProductos.repx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Expedientes.repx" />
+    <EmbeddedResource Include="Reports\XtraReport.repx" />
+    <EmbeddedResource Include="Reports\XtraReportProductos.repx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.AspNetCore.Bootstrap" Version="18.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.109.2" />
+    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="18.2.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Reports\Expedientes.cs">
+      <DependentUpon>Expedientes.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Expedientes.Designer.cs">
+      <DependentUpon>Expedientes.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\XtraReport.cs">
+      <DependentUpon>XtraReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\XtraReport.Designer.cs">
+      <DependentUpon>XtraReport.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\XtraReportProductos.cs">
+      <DependentUpon>XtraReportProductos.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\XtraReportProductos.Designer.cs">
+      <DependentUpon>XtraReportProductos.repx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
